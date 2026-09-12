@@ -156,8 +156,8 @@ export DB_PASSWORD="sua_senha"
 - `GET /perfumes/{id}` — detalhe de um perfume específico.
 - `GET /materias-primas` e `GET /materias-primas/{id}` — idem, para matérias-primas.
 
-`[PRINT: listagem de perfumes]`
-`[PRINT: página de detalhe de um perfume]`
+<img width="1897" height="962" alt="image" src="https://github.com/user-attachments/assets/c4cc63e5-6843-46e0-b7ce-717cbcc557f4" />
+
 
 ### Update — Editar uma matéria-prima
 1. Logado, acesse `/materias-primas`, clique em **Editar** em um item.
