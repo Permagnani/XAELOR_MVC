@@ -148,7 +148,8 @@ export DB_PASSWORD="sua_senha"
 
 <img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/26472ed5-1ea2-449f-8610-ca437612b85c" />
 
-`[PRINT: mensagem de sucesso e o perfume aparecendo na listagem]`
+<img width="1912" height="971" alt="image" src="https://github.com/user-attachments/assets/f63b381f-6e84-4252-80e2-feb0ff44683a" />
+
 
 ### Read — Consultar perfumes e matérias-primas
 - `GET /perfumes` — lista todos os perfumes (rota pública, sem necessidade de login).
