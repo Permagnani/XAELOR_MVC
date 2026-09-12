@@ -172,8 +172,12 @@ export DB_PASSWORD="sua_senha"
 1. Logado, clique em **Excluir** em um perfume ou matéria-prima na listagem (há uma
    confirmação via `confirm()` antes de excluir).
 
-`[PRINT: confirmação de exclusão]`
-`[PRINT: registro removido da listagem]`
+<img width="1908" height="962" alt="image" src="https://github.com/user-attachments/assets/9897ec8c-583c-4eb6-9bb0-0e1303ba2c4b" />
+
+
+
+<img width="1902" height="963" alt="image" src="https://github.com/user-attachments/assets/c4ee4cf2-3489-4221-986d-604657e0ca15" />
+
 
 ## Deploy
 
@@ -188,12 +192,9 @@ para plataformas como **Render** ou **Fly.io**:
    Oracle FIAP não seja acessível pela plataforma de Deploy).
 4. Após o Deploy, cole aqui o link de produção:
 
-> **Link de produção:** `https://SUBSTITUA-PELO-LINK-DO-DEPLOY`
-> **Plataforma utilizada:** `Render / Fly.io / outra — SUBSTITUA`
+> **Link de produção:** https://xaelor-mvc.onrender.com
+> **Plataforma utilizada:** Render
 
-## Vídeo de demonstração
-
-> **Link do vídeo (~5 min):** `SUBSTITUA-PELO-LINK-DO-VIDEO`
 
 Mostrando: navegação pública (listagem e detalhe de perfumes/matérias-primas), login,
 cadastro (Create), edição (Update) e exclusão (Delete) pela interface Web.
