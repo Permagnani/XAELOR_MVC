@@ -3,17 +3,18 @@ Turma:
 Curso: Tecnologia em Análise e Desenvolvimento de Sistemas (TDS)
 
 Integrantes do grupo (nome completo e RM):
-1. NOME COMPLETO - RM
-2. NOME COMPLETO - RM
-3. NOME COMPLETO - RM
-
+1. Matheus Gianolli - RM 565258
+2. Gustavo Ribeiro Permagnani- RM 564995
+3. Enzo Xavier Coelho - RM 563379
+4. Julia Menezes - RM 565568
+5. Larissa De Magalhaes - RM 566457
 IDE utilizada para elaboração do projeto: (IntelliJ / Eclipse / NetBeans)
 
 Link do GitHub (repositório da Parte II, separado da Parte I, com o ReadMe completo):
-
+https://github.com/Permagnani/XAELOR_MVC
 
 Link do Deploy (produção):
-
+https://xaelor-mvc.onrender.com
 
 Plataforma utilizada para o Deploy (ex: Render, Fly.io, Railway, etc):
-
+Render
