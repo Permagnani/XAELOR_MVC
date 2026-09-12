@@ -163,8 +163,10 @@ export DB_PASSWORD="sua_senha"
 1. Logado, acesse `/materias-primas`, clique em **Editar** em um item.
 2. Altere os campos e clique em **Salvar alterações**.
 
-`[PRINT: formulário de edição preenchido]`
-`[PRINT: matéria-prima atualizada na listagem]`
+<img width="1900" height="963" alt="image" src="https://github.com/user-attachments/assets/548999c6-eed5-4b79-8814-5e1c3511b226" />
+
+
+<img width="1895" height="962" alt="image" src="https://github.com/user-attachments/assets/5f27be1a-fea5-4a81-8380-732c06293ebb" />
 
 ### Delete — Remover um registro
 1. Logado, clique em **Excluir** em um perfume ou matéria-prima na listagem (há uma
