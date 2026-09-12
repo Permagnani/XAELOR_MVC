@@ -17,7 +17,7 @@ preferencialmente, o mesmo banco de dados Oracle FIAP.
 - [Como rodar localmente](#como-rodar-localmente)
 - [CRUD na interface Web — exemplos](#crud-na-interface-web--exemplos)
 - [Deploy](#deploy)
-- [Vídeo de demonstração](#vídeo-de-demonstração)
+
 
 ## Tecnologias
 
