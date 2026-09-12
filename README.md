@@ -146,7 +146,8 @@ export DB_PASSWORD="sua_senha"
 2. Clique em **+ Novo perfume**.
 3. Preencha nome, gênero, descrição e preço e clique em **Cadastrar perfume**.
 
-`[PRINT: tela do formulário "Novo perfume" preenchido]`
+<img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/26472ed5-1ea2-449f-8610-ca437612b85c" />
+
 `[PRINT: mensagem de sucesso e o perfume aparecendo na listagem]`
 
 ### Read — Consultar perfumes e matérias-primas
