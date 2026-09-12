@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Entrar')}"></head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main>
+  <div class="xa-login">
+    <h2>Área restrita</h2>
+    <p>Entre para cadastrar, editar ou remover perfumes e matérias-primas.</p>
+
+    <div th:if="${param.error}" class="xa-flash xa-alert-error">
+      Usuário ou senha inválidos.
+    </div>
+    <div th:if="${param.logout}" class="xa-flash">
+      Sessão encerrada.
+    </div>
+
+    <form th:action="@{/login}" method="post" class="xa-form" style="text-align:left;">
+      <div class="xa-field">
+        <label for="username">Usuário</label>
+        <input id="username" type="text" name="username" autofocus="autofocus"/>
+      </div>
+      <div class="xa-field">
+        <label for="password">Senha</label>
+        <input id="password" type="password" name="password"/>
+      </div>
+      <div class="xa-form-actions">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+        <a th:href="@{/}" class="btn btn-ghost">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

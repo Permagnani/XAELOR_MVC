@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head(${modoEdicao} ? 'Editar perfume' : 'Novo perfume')}"></head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main>
+  <a th:href="@{/perfumes}" class="btn btn-ghost btn-sm">&larr; Voltar</a>
+  <h1 th:text="${modoEdicao} ? 'Editar perfume' : 'Novo perfume'">Novo perfume</h1>
+
+  <form class="xa-form"
+        th:action="${modoEdicao} ? @{/perfumes/{id}/editar(id=${perfume.id})} : @{/perfumes}"
+        th:object="${perfume}" method="post">
+
+    <div class="xa-field">
+      <label for="nomePerfume">Nome do perfume</label>
+      <input id="nomePerfume" type="text" th:field="*{nomePerfume}" placeholder="Ex: Âmbar Noturno"/>
+      <div class="xa-error" th:if="${#fields.hasErrors('nomePerfume')}" th:errors="*{nomePerfume}"></div>
+    </div>
+
+    <div class="xa-field">
+      <label for="generoPerfume">Gênero</label>
+      <input id="generoPerfume" type="text" th:field="*{generoPerfume}" placeholder="Ex: Feminino, Masculino, Unissex"/>
+      <div class="xa-error" th:if="${#fields.hasErrors('generoPerfume')}" th:errors="*{generoPerfume}"></div>
+    </div>
+
+    <div class="xa-field">
+      <label for="descricaoPerfume">Descrição</label>
+      <textarea id="descricaoPerfume" rows="3" th:field="*{descricaoPerfume}" placeholder="Notas de topo, corpo e fundo..."></textarea>
+    </div>
+
+    <div class="xa-field">
+      <label for="preco">Preço (R$)</label>
+      <input id="preco" type="number" step="0.01" min="0" th:field="*{preco}"/>
+    </div>
+
+    <div class="xa-form-actions">
+      <button type="submit" class="btn btn-primary" th:text="${modoEdicao} ? 'Salvar alterações' : 'Cadastrar perfume'">Salvar</button>
+      <a th:href="@{/perfumes}" class="btn btn-ghost">Cancelar</a>
+    </div>
+  </form>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

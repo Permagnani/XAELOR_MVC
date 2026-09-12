@@ -1,0 +1,19 @@
+Checkpoint 4 - Parte II - Spring MVC, Security e Deploy
+Turma:
+Curso: Tecnologia em Análise e Desenvolvimento de Sistemas (TDS)
+
+Integrantes do grupo (nome completo e RM):
+1. NOME COMPLETO - RM
+2. NOME COMPLETO - RM
+3. NOME COMPLETO - RM
+
+IDE utilizada para elaboração do projeto: (IntelliJ / Eclipse / NetBeans)
+
+Link do GitHub (repositório da Parte II, separado da Parte I, com o ReadMe completo):
+
+
+Link do Deploy (produção):
+
+
+Plataforma utilizada para o Deploy (ex: Render, Fly.io, Railway, etc):
+

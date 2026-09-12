@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/head :: head('Detalhe da matéria-prima')}"></head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main>
+  <a th:href="@{/materias-primas}" class="btn btn-ghost btn-sm">&larr; Voltar</a>
+
+  <div class="xa-detail">
+    <span class="tag" th:text="${materiaPrima.tipoUnidade}">Unidade</span>
+    <h2 th:text="${materiaPrima.nome}">Nome</h2>
+    <dl>
+      <dt>ID</dt><dd th:text="${materiaPrima.id}">1</dd>
+      <dt>Tipo de unidade</dt><dd th:text="${materiaPrima.tipoUnidade}">-</dd>
+      <dt>Descrição</dt><dd th:text="${materiaPrima.descricao} ?: '—'">-</dd>
+    </dl>
+    <div class="xa-form-actions" sec:authorize="isAuthenticated()">
+      <a th:href="@{/materias-primas/{id}/editar(id=${materiaPrima.id})}" class="btn btn-ghost">Editar</a>
+      <form th:action="@{/materias-primas/{id}/deletar(id=${materiaPrima.id})}" method="post"
+            onsubmit="return confirm('Remover esta matéria-prima?');">
+        <button type="submit" class="btn btn-wine">Excluir</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<header class="xa-header" th:fragment="nav">
+  <nav class="xa-nav">
+    <a class="brand" th:href="@{/}">XAEL<span>OR</span></a>
+    <ul>
+      <li><a th:href="@{/}">Início</a></li>
+      <li><a th:href="@{/perfumes}">Perfumes</a></li>
+      <li><a th:href="@{/materias-primas}">Matérias-primas</a></li>
+    </ul>
+    <div class="user-box">
+      <span sec:authorize="isAuthenticated()">
+        Olá, <span sec:authentication="name">usuário</span> ·
+        <form th:action="@{/logout}" method="post" style="display:inline">
+          <button type="submit" class="btn btn-ghost btn-sm">Sair</button>
+        </form>
+      </span>
+      <a sec:authorize="isAnonymous()" th:href="@{/login}" class="btn btn-ghost btn-sm">Entrar</a>
+    </div>
+  </nav>
+</header>
+</body>
+</html>

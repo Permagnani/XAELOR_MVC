@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/head :: head('Matérias-primas')}"></head>
+<body>
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<div th:if="${mensagem}" class="xa-flash" th:text="${mensagem}"></div>
+
+<main>
+  <div class="xa-section-head">
+    <div>
+      <div class="eyebrow-line" style="color:var(--xa-wine-soft);font-size:0.8rem;letter-spacing:0.2em;">INSUMOS</div>
+      <h1>Matérias-primas</h1>
+    </div>
+    <a sec:authorize="isAuthenticated()" th:href="@{/materias-primas/nova}" class="btn btn-primary">+ Nova matéria-prima</a>
+  </div>
+
+  <div th:if="${#lists.isEmpty(materiasPrimas)}" class="xa-empty">
+    Nenhuma matéria-prima cadastrada ainda.
+    <div style="margin-top:1rem;">
+      <a sec:authorize="isAuthenticated()" th:href="@{/materias-primas/nova}" class="btn btn-wine">Cadastrar a primeira</a>
+    </div>
+  </div>
+
+  <div class="xa-grid" th:unless="${#lists.isEmpty(materiasPrimas)}">
+    <div class="xa-card" th:each="mp : ${materiasPrimas}">
+      <span class="tag" th:text="${mp.tipoUnidade}">Unidade</span>
+      <h3 th:text="${mp.nome}">Nome</h3>
+      <p th:if="${mp.descricao}" th:text="${mp.descricao}">Descrição</p>
+      <div class="xa-card-actions">
+        <a th:href="@{/materias-primas/{id}(id=${mp.id})}" class="btn btn-sm">Detalhes</a>
+        <a sec:authorize="isAuthenticated()" th:href="@{/materias-primas/{id}/editar(id=${mp.id})}" class="btn btn-sm btn-ghost">Editar</a>
+        <form sec:authorize="isAuthenticated()" th:action="@{/materias-primas/{id}/deletar(id=${mp.id})}" method="post" style="display:inline"
+              onsubmit="return confirm('Remover esta matéria-prima?');">
+          <button type="submit" class="btn btn-sm btn-wine">Excluir</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

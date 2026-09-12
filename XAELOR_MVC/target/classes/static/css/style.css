@@ -1,0 +1,312 @@
+/* ==========================================================================
+   XAELOR — identidade visual da perfumaria
+   Paleta: fundo grafite quente, dourado envelhecido como acento, bordô como
+   segunda cor. Serifada para títulos (evoca rótulo de perfume/etiqueta),
+   sem-serifa para texto corrido.
+   ========================================================================== */
+
+:root {
+  --xa-bg: #17130f;
+  --xa-bg-alt: #1f1a15;
+  --xa-panel: #241e19;
+  --xa-border: #3a2f27;
+  --xa-gold: #c9a15b;
+  --xa-gold-soft: #e7cd97;
+  --xa-wine: #7a2634;
+  --xa-wine-soft: #9c3b4b;
+  --xa-cream: #efe6d8;
+  --xa-cream-dim: #b9ad9b;
+  --xa-danger: #c25454;
+  --xa-radius: 2px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--xa-bg);
+  color: var(--xa-cream);
+  font-family: "Cormorant Garamond", "Georgia", serif;
+}
+
+body {
+  font-family: "Jost", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, .brand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--xa-gold-soft);
+  margin: 0 0 0.4em 0;
+}
+
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.3rem; }
+
+a { color: var(--xa-gold-soft); text-decoration: none; }
+a:hover { color: var(--xa-cream); text-decoration: underline; }
+
+p { color: var(--xa-cream-dim); max-width: 68ch; }
+
+/* -------------------- Cabeçalho -------------------- */
+
+.xa-header {
+  border-bottom: 1px solid var(--xa-border);
+  background: linear-gradient(180deg, var(--xa-bg-alt), var(--xa-bg));
+}
+
+.xa-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.xa-nav .brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.xa-nav .brand span { color: var(--xa-wine-soft); }
+
+.xa-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+
+.xa-nav ul a { color: var(--xa-cream); }
+.xa-nav ul a:hover { color: var(--xa-gold-soft); }
+
+.xa-nav .user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--xa-cream-dim);
+}
+
+/* -------------------- Layout geral -------------------- */
+
+main {
+  flex: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.6rem 1.5rem 3.5rem;
+}
+
+.xa-hero {
+  border-bottom: 1px solid var(--xa-border);
+  padding: 3.6rem 1.5rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, rgba(201,161,91,0.10), transparent 60%),
+    var(--xa-bg);
+}
+
+.xa-hero .eyebrow-line {
+  color: var(--xa-wine-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+}
+
+.xa-hero p { margin: 1rem auto 0; }
+
+.xa-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 1.8rem; flex-wrap: wrap; }
+
+/* -------------------- Botões -------------------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--xa-gold);
+  border-radius: var(--xa-radius);
+  color: var(--xa-gold-soft);
+  background: transparent;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover { background: var(--xa-gold); color: var(--xa-bg); text-decoration: none; }
+
+.btn-primary { background: var(--xa-gold); color: var(--xa-bg); }
+.btn-primary:hover { background: var(--xa-gold-soft); color: var(--xa-bg); }
+
+.btn-wine { border-color: var(--xa-wine-soft); color: var(--xa-wine-soft); }
+.btn-wine:hover { background: var(--xa-wine); color: var(--xa-cream); }
+
+.btn-ghost { border-color: var(--xa-border); color: var(--xa-cream-dim); }
+.btn-ghost:hover { background: var(--xa-panel); color: var(--xa-cream); }
+
+.btn-sm { padding: 0.35rem 0.8rem; font-size: 0.82rem; }
+
+/* -------------------- Cards / listas -------------------- */
+
+.xa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.xa-card {
+  border: 1px solid var(--xa-border);
+  background: var(--xa-panel);
+  padding: 1.4rem;
+  border-radius: var(--xa-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.xa-card .tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--xa-wine-soft);
+  border: 1px solid var(--xa-wine-soft);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--xa-radius);
+}
+
+.xa-card .price { color: var(--xa-gold-soft); font-size: 1.2rem; margin-top: 0.2rem; }
+
+.xa-card-actions { display: flex; gap: 0.6rem; margin-top: 0.6rem; }
+
+.xa-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--xa-border);
+  padding-bottom: 1rem;
+}
+
+.xa-empty {
+  border: 1px dashed var(--xa-border);
+  padding: 2.4rem;
+  text-align: center;
+  color: var(--xa-cream-dim);
+  margin-top: 2rem;
+}
+
+/* -------------------- Formulários -------------------- */
+
+.xa-form {
+  max-width: 560px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.xa-field label {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--xa-cream-dim);
+  margin-bottom: 0.35rem;
+}
+
+.xa-field input,
+.xa-field select,
+.xa-field textarea {
+  width: 100%;
+  background: var(--xa-bg-alt);
+  border: 1px solid var(--xa-border);
+  color: var(--xa-cream);
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--xa-radius);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.xa-field input:focus,
+.xa-field select:focus,
+.xa-field textarea:focus {
+  outline: 2px solid var(--xa-gold);
+  outline-offset: 1px;
+}
+
+.xa-error { color: var(--xa-danger); font-size: 0.82rem; margin-top: 0.3rem; }
+
+.xa-form-actions { display: flex; gap: 0.8rem; margin-top: 0.5rem; }
+
+/* -------------------- Detalhe -------------------- */
+
+.xa-detail {
+  border: 1px solid var(--xa-border);
+  background: var(--xa-panel);
+  padding: 2rem;
+  margin-top: 2rem;
+  max-width: 560px;
+}
+
+.xa-detail dl { display: grid; grid-template-columns: 140px 1fr; row-gap: 0.7rem; margin: 1rem 0; }
+.xa-detail dt { color: var(--xa-cream-dim); font-size: 0.85rem; }
+.xa-detail dd { margin: 0; }
+
+/* -------------------- Flash / alertas -------------------- */
+
+.xa-flash {
+  max-width: 1080px;
+  margin: 1.4rem auto 0;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--xa-gold);
+  color: var(--xa-gold-soft);
+  background: rgba(201, 161, 91, 0.08);
+  border-radius: var(--xa-radius);
+}
+
+.xa-alert-error {
+  border-color: var(--xa-danger);
+  color: var(--xa-danger);
+  background: rgba(194, 84, 84, 0.08);
+}
+
+/* -------------------- Login -------------------- */
+
+.xa-login {
+  max-width: 380px;
+  margin: 3.5rem auto;
+  border: 1px solid var(--xa-border);
+  background: var(--xa-panel);
+  padding: 2.4rem;
+  text-align: center;
+}
+
+/* -------------------- Rodapé -------------------- */
+
+.xa-footer {
+  border-top: 1px solid var(--xa-border);
+  padding: 1.6rem 1.5rem;
+  text-align: center;
+  color: var(--xa-cream-dim);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .xa-nav { flex-direction: column; align-items: flex-start; }
+  .xa-nav ul { flex-wrap: wrap; gap: 1rem; }
+  .xa-detail dl { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,5 @@
+br\com\fiap\xaelor_mvc\XaelorMvcApplication.class
+br\com\fiap\xaelor_mvc\config\SecurityConfig.class
+br\com\fiap\xaelor_mvc\controller\HomeController.class
+br\com\fiap\xaelor_mvc\controller\MateriaPrimaController.class
+br\com\fiap\xaelor_mvc\controller\LoginController.class
